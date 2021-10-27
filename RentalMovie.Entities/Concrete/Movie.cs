@@ -14,7 +14,7 @@ namespace RentalMovie.Entities.Concrete
         public String MovieDescription { get; set; }
         public string MovieImageUrl { get; set; }
         public bool IsPopular { get; set; }
-        public DateTime DatePublished { get; set; }
+        public int DatePublished { get; set; }
         public int CategoryId { get; set; }
     }
 }

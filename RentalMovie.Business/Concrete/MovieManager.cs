@@ -22,7 +22,7 @@ namespace RentalMovie.Business.Concrete
             _movieDal = movieDal;
         }
 
-        [@SecuredOperation("admin")]
+ //       [@SecuredOperation("admin")]
         [ValidationAspect(typeof(MovieValidator))]
         [CacheRemoveAspect("IMovieService.Get")]
         public IResult Add(Movie movie)
@@ -31,14 +31,14 @@ namespace RentalMovie.Business.Concrete
             return new SuccessResult(Messages.MovieAdded);
         }
 
-        [@SecuredOperation("admin")]
+//        [@SecuredOperation("admin")]
         public IResult Delete(Movie movie)
         {
             _movieDal.Delete(movie);
             return new SuccessResult(Messages.MovieDeleted);
         }
 
-        [@SecuredOperation("admin")]
+//        [@SecuredOperation("admin")]
         [PerformanceAspect(5)]
         public IDataResult<List<Movie>> GetAll()
         {

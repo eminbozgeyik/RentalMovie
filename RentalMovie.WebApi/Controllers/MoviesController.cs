@@ -33,7 +33,7 @@ namespace WebAPI.Controllers
             return BadRequest(result);
 
         }
-        [HttpGet("getcardetails")]
+        [HttpGet("getmoviedetails")]
         public IActionResult GetCarDetails()
         {
             var result = _movieService.GetMovieDetails();
@@ -43,7 +43,7 @@ namespace WebAPI.Controllers
 
         }
 
-        [HttpGet("getcarsbybrandid")]
+        [HttpGet("getmoviesbycategoryid")]
         public IActionResult GetCarDetails(int id)
         {
             var result = _movieService.GetMoviesByCategoryId(id);
