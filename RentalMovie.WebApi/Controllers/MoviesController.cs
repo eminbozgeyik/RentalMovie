@@ -44,7 +44,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpGet("getmoviesbycategoryid")]
-        public IActionResult GetCarDetails(int id)
+        public IActionResult GetMoviesByCategoryId(int id)
         {
             var result = _movieService.GetMoviesByCategoryId(id);
             if (result.Success)

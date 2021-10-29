@@ -16,5 +16,6 @@ namespace RentalMovie.Entities.Concrete
         public bool IsPopular { get; set; }
         public int DatePublished { get; set; }
         public int CategoryId { get; set; }
+        public string RelatedVideoUrl { get; set; }
     }
 }

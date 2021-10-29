@@ -53,7 +53,7 @@ namespace RentalMovie.Business.Concrete
 
         public IDataResult<List<Movie>> GetMoviesByCategoryId(int id)
         {
-            return new SuccessDataResult<List<Movie>>(_movieDal.GetAll(m => m.MovieId == id));
+            return new SuccessDataResult<List<Movie>>(_movieDal.GetAll(m => m.CategoryId == id));
         }
 
         public IDataResult<List<MovieDetailDto>> GetMovieDetails()

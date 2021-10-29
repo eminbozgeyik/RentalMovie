@@ -28,7 +28,7 @@ namespace WebAPI.Controllers
         [HttpGet("getbycategoryname")]
         public IActionResult GetByCategoryName(string name)
         {
-            var result = _categoryService.GetAll();
+            var result = _categoryService.GetByCategoryName(name);
             if (result.Success)
             { return Ok(result.Data); }
             return BadRequest(result);
